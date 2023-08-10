@@ -1,0 +1,16 @@
+.tooltip {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: bold;
+    font-size: .875rem;
+
+    position: absolute;
+    max-width: 150px;
+    z-index: 500;
+    padding: .5rem;
+
+    background: rgba(0, 0, 0, .6);
+    box-shadow: 0 0 0 2px #FB5, 0 0 0 6px rgba(0, 0, 0, .6);
+    color: white;
+
+    border-radius: 3px;
+}

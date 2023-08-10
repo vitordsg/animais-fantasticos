@@ -1,0 +1,70 @@
+[data-menu="button"] {
+    display: none;
+}
+
+@media (max-width: 700px) {
+   .js [data-menu="button"] {
+        display: flex;
+        position: relative;
+
+        background: #222;
+
+        border: none;
+        padding: .5rem 1rem;
+        margin: 10px;
+        border-radius: 4px;
+        z-index: 300;
+
+        text-transform: uppercase;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-weight: bold;
+        color: white;
+
+        cursor: pointer;
+        
+        align-items: center;
+    }
+
+
+    .js [data-menu="button"]::before {
+        content: '';
+        display: inline-block;
+        
+        margin-right: 4px;
+        height: 2px;
+        width: 12px;
+
+        background: white;
+        box-shadow: 0 4px white, 0 -4px white;
+
+        transition: transform .3s;
+    }
+
+    .js [data-menu="button"].active::before {
+        transform: rotate(90deg);
+    }
+
+    .js [data-menu="list"] {
+        display: none;
+        position: absolute;
+
+        width: 160px;
+        z-index: 200;
+        padding: 60px 0 20px 0;
+        top: 0;
+
+        background: #FB5;
+        box-shadow: 3px 2px 2px 3px rgba(0,0,0,.2);
+
+    }
+
+    .js [data-menu="list"].active {
+        display: block;
+        animation: show-right .3s forwards;
+    }
+
+    .js .dropdown-menu {
+        position: static;
+        border: none;
+    }
+}
