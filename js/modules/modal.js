@@ -16,7 +16,6 @@ export default class Modal {
 
   // adiciona o evento de toggle ao modal
   eventToggleModal(event) {
-    console.log(this);
     event.preventDefault();
     this.toggleModal();
   }
